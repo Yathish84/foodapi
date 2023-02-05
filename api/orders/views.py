@@ -33,8 +33,17 @@ class GetSpecificOrderByUser(Resource):
     def get(self,user_id, order_id):
         """user order by userid and orderid"""
         pass
+
+    
 @order_namespace.route("/user/<int:user_id>/orders")
 class GetSpecificUserOrders(Resource):
     def get(self,user_id):
         """Get all orders of specific user"""
+        pass
+
+
+@order_namespace.route('/order/status/<int:order_id>')
+class UpdateOrderStatus(Resource):
+    def patch(self,order_id):
+        """update order status"""
         pass
